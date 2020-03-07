@@ -6,8 +6,9 @@ echo $ANDROID_SDK_ROOT
 echo "Setting up your App"
 git clone "https://github.com/$GITHUB_REPOSITORY.git"
 IFS='/'
-read -ra repository <<< "$GITHUB_REPOSITORY"
-cd ${repository[1]}
+repository=$(echo "${GITHUB_REPOSITORY}" | cut -d'/' -f2)
+echo "${repository}"
+cd ${repository}
 chmod +x ./gradlew
 ./gradlew assembleDebug
 
