@@ -13,13 +13,13 @@ chmod +x ./gradlew
 ./gradlew assembleDebug
 
 app_url=$(curl -u "${bs_username}:${bs_accesskey}" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@${PWD}/app/build/outputs/apk/debug/app-debug.apk" | jq '.app_url')
-
-echo "${app_url}"
-sed -i "s/<APP_HASHED_ID>/${app_url}/g" appium/test.js
+url=$(echo "${url}" | cut -d'/' -f3)
+echo "${url}"
+sed -i "s/<APP_HASHED_ID>/${url}/g" appium/test.js
 cat appium/test.js
-# sed -i "s/<BSTACK_USERNAME>/${bs_username}/g" appium/test.js
-# sed -i "s/<BSTACK_ACCESS_KEY>/${bs_accesskey}/g" appium/test.js
+sed -i "s/<BSTACK_USERNAME>/${bs_username}/g" appium/test.js
+sed -i "s/<BSTACK_ACCESS_KEY>/${bs_accesskey}/g" appium/test.js
 
-# node appium/test.js
+node appium/test.js
 
 echo ::set-output name=console::op
