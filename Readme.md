@@ -13,4 +13,22 @@ For this action to execute successfully:
 - There is an `appium` folder in the root directory which contains a javascript file for testing.
 - Push the `gradlew`, this will be used to build the apk.
 
+## Usage
+Sample Snippet for `/.github/workflows/main.yml`
+```
+on: [push]
+
+jobs:
+    appium_job:
+        runs-on: ubuntu-latest
+        name: Run Appium Test
+        steps:
+        - name: Appium Test step
+          id: Appium
+          uses: Zemotacqy/Appium-js@v2.0
+          env: 
+            bs_username: ${{ secrets.BS_USERNAME }}
+            bs_accesskey: ${{ secrets.BS_ACCESSKEY }}  
+```
+
 You can refer to this [Sample App](https://github.com/Zemotacqy/Sample-Appium-js) for your reference.
