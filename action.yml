@@ -1,0 +1,8 @@
+name: 'Appium-js'
+description: 'Run your appium tests on android/ios with Github Action'
+outputs:
+    console:
+        description: 'Output of appium script running the test.'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
