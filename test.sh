@@ -1,6 +1,8 @@
 #!/bin/sh 
 
-echo "Hello manish"
+echo "Welcome to Appium-js"
+
+echo "Building APk"
 op="This is a output"
 
 echo "${INPUT_BS_USERNAME}"
