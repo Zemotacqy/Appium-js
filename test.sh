@@ -21,7 +21,7 @@ cat appium/test.js
 sed -i "s/<BSTACK_ACCESS_KEY>/${bs_accesskey}/g" appium/test.js
 cat appium/test.js
 
-# node appium/test.js
+node appium/test.js
 echo "${bs_username}"
 echo "${bs_accesskey}"
 
