@@ -1,12 +1,12 @@
 #!/bin/sh 
 
 echo "Welcome to Appium-js"
-echo "Hllo world"
-echo "Building APk"
-op="This is a output"
 echo $ANDROID_HOME
 echo $ANDROID_SDK_ROOT
 
-echo "${INPUT_BS_USERNAME}"
-echo "${INPUT_BS_ACCESSKEY}"
+echo $GITHUB_REPOSITORY
+
+export BS_USERNAME=$INPUT_BS_USERNAME
+export BS_ACCESSKEY=$INPUT_BS_ACCESSKEY
+echo "${BS_USERNAME}"
 echo ::set-output name=console::op
