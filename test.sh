@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/sh 
 
 echo "Hello manish"
 op="This is a output"
