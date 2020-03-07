@@ -1,4 +1,8 @@
 name: 'Appium-js'
+author: Zemotacqy <mranjan1398@gmail.com>
+branding:
+    icon: bar-chart-2
+    color: white
 description: 'Run your appium tests on android with Github Action'
 outputs:
     console:
