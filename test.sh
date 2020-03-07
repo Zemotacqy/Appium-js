@@ -1,11 +1,15 @@
 #!/bin/sh 
 
 echo "Welcome to Appium-js"
-echo $ANDROID_HOME
 echo $ANDROID_SDK_ROOT
-echo $JAVA_HOME
 
-echo $GITHUB_REPOSITORY
+echo "Setting up your App"
+git clone "https://github.com/$GITHUB_REPOSITORY.git"
+IFS='/'
+read -ra repository <<< "$GITHUB_REPOSITORY"
+cd ${repository[1]}
+chmod +x ./gradlew
+./gradlew assembleDebug
 
 echo "${bs_username}"
 echo "${bs_accesskey}"
