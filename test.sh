@@ -6,7 +6,7 @@ echo $ANDROID_SDK_ROOT
 
 echo $GITHUB_REPOSITORY
 
-export BS_USERNAME=$BS_USERNAME
-export BS_ACCESSKEY=$BS_ACCESSKEY
-echo "${BS_USERNAME}"
+echo "${bs_username}"
+echo "${bs_accesskey}"
+
 echo ::set-output name=console::op
