@@ -6,3 +6,6 @@ outputs:
 runs:
     using: 'docker'
     image: 'Dockerfile'
+    env: 
+        bs_username: ${{ secrets.bs_username }}
+        bs_accesskey: ${{ secrets.bs_accesskey }}  
