@@ -1,7 +1,7 @@
 FROM node:10
 
 RUN apt-get update && apt-get install -y \
-    openjdk-8-jdk unzip git
+    openjdk-8-jdk unzip git jq
 
 RUN mkdir android
 
