@@ -1,5 +1,12 @@
 name: 'Appium-js'
 description: 'Run your appium tests on android/ios with Github Action'
+inputs:
+    bs_username: 
+        description: 'Browserstack Username'
+        required: true
+    bs_access_key:
+        description: 'Browserstack Access Key'
+        required: true
 outputs:
     console:
         description: 'Output of appium script running the test.'
