@@ -12,6 +12,8 @@ cd ${repository}
 chmod +x ./gradlew
 ./gradlew assembleDebug
 
+curl -u "${bs_username}:${bs_accesskey}" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@${PWD}/app/build/outputs/apk/debug/app-debug.apk"
+
 echo "${bs_username}"
 echo "${bs_accesskey}"
 
